@@ -1,0 +1,31 @@
+{
+  "name": "discord-bot-lavalink",
+  "version": "1.0.0",
+  "description": "Learn discord bot using lavalink",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/sim00507/discord-bot-lavalink"
+  },
+  "author": "jyanie",
+  "license": "ISC",
+  "dependencies": {
+    "@redis/client": "^1.6.0",
+    "@types/node": "^20.4.8",
+    "@types/ws": "^8.5.5",
+    "discord.js": "^14.16.2",
+    "dotenv": "^16.4.5",
+    "lavalink-client": "^2.3.6",
+    "redis": "^4.7.0",
+    "ts-node": "^10.9.1",
+    "ws": "^8.13.0"
+  },
+  "devDependencies": {
+    "tsconfig-paths": "^4.2.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.2"
+  }
+}
