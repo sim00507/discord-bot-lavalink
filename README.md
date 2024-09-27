@@ -42,10 +42,10 @@ npx ts-node index.ts
 ## Lavalink 공식 문서
 Lavalink 설정 및 API 사용에 대한 자세한 내용은 아래의 공식 문서를 참조</br>
 [Lavalink Github](https://github.com/lavalink-devs/Lavalink)</br>
-[Lavalink](https://lavalink.dev/)
+[Lavalink 홈페이지](https://lavalink.dev/)
 
 
-## 플러그인
+## 사용한 플러그인
 [youtube-source](https://github.com/lavalink-devs/youtube-source)</br>
 [LavaSrc](https://github.com/topi314/LavaSrc)</br>
 [LavaSearch](https://github.com/topi314/LavaSearch)</br>
@@ -55,3 +55,7 @@ Lavalink 설정 및 API 사용에 대한 자세한 내용은 아래의 공식 �
 - 봇 구동까지 완료.
 - 명령어 구현하면 됨.
 - 플러그인: [LavaSrc](https://github.com/topi314/LavaSrc)
+
+### 2024-09-28
+- 필요한 명령어 구현 완료.
+- 플러그인 모두 적용 완료.
