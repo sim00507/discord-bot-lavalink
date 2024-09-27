@@ -6,6 +6,8 @@ import { delay, formatMS_HHMMSS } from "../utils/Time";
 
 const messagesMap = new Map<string, Message>();
 
+// lavalink github 문서 참고: https://github.com/Tomato6966/lavalink-client/tree/main 
+
 export function PlayerEvents(client:BotClient) {
     /**
      * PLAYER EVENTS
@@ -40,6 +42,7 @@ export function PlayerEvents(client:BotClient) {
          *
         */
     })
+    /* 라바링크 문서에 없는 함수 인자들. (아직 공식 릴리즈 버전에 없음)
     .on("playerMuteChange", (player, selfMuted, serverMuted) => {
         logPlayer(client, player, "INFO: playerMuteChange", { selfMuted, serverMuted });
         // e.g. what you could do is when the bot get's server muted, you could pause the player, and unpause it when unmuted again
@@ -135,6 +138,7 @@ export function PlayerEvents(client:BotClient) {
             })
         }
     })
+    */
     .on("debug", (eventKey, eventData) => {
         // skip specific log
         if(eventKey === DebugEvents.NoAudioDebug && eventData.message === "Manager is not initated yet") return;
