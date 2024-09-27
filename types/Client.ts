@@ -5,6 +5,8 @@ import {
 } from "discord.js";
 import { LavalinkManager } from "lavalink-client";
 import { MiniMap } from "lavalink-client";
+import { RedisClientType } from "redis";
+import { JSONStore } from "../utils/CustomClasses"
 
 declare type InteractionExecuteFN = (client:BotClient, interaction:ChatInputCommandInteraction<"cached">) => any;
 declare type AutoCompleteExecuteFN = (client:BotClient, interaction:AutocompleteInteraction) => any;
@@ -27,6 +29,7 @@ export interface SubCommand {
 export interface BotClient extends Client {
     lavalink: LavalinkManager;
     commands: MiniMap<string, Command|SubCommand>
+    redis: RedisClientType | JSONStore | MiniMap<string, string>;
 }
 export interface Event {
     name: string,

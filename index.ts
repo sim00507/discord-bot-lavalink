@@ -3,6 +3,7 @@ import { Client, GatewayIntentBits } from "discord.js"; // example for a discord
 import { envConfig } from "./config";
 import { BotClient } from "./types/Client";
 import interactionCreateEvent from "./events/interactionCreate";
+import { parseLavalinkConnUrl, MiniMap, ManagerOptions } from "lavalink-client";
 
 console.log(envConfig)  // process.env 값 확인
 
@@ -14,6 +15,20 @@ const client = new Client({
         GatewayIntentBits.GuildVoiceStates,
     ]
 }) as BotClient;
+
+if(envConfig.redis.url && 1 < 0) { // little invalid if statement so the redis doesn't happen for testing purposes
+    client.redis = createClient({ url: envConfig.redis.url, password: envConfig.redis.password });
+    client.redis.connect(); // @ts-ignore
+    client.redis.on("error", (err) => console.log('Redis Client Error', err));
+} else if(envConfig.useJSONStore) {
+    client.redis = new JSONStore();
+} else client.redis = new MiniMap<string, string>();
+
+client.defaultVolume = 100;
+
+
+const LavalinkNodesOfEnv = process.env.LAVALINKNODES?.split(" ").filter(v => v.length).map(url => parseLavalinkConnUrl(url));
+console.log(LavalinkNodesOfEnv); // you can then provide the result of here in LavalinkManagerOptions#nodes, or transform the result for further data.
 
 // create instance
 client.lavalink = new LavalinkManager({
