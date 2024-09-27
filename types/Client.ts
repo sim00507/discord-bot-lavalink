@@ -11,6 +11,12 @@ import { JSONStore } from "../utils/CustomClasses"
 declare type InteractionExecuteFN = (client:BotClient, interaction:ChatInputCommandInteraction<"cached">) => any;
 declare type AutoCompleteExecuteFN = (client:BotClient, interaction:AutocompleteInteraction) => any;
 
+export interface CustomRequester {
+    id: string,
+    username: string,
+    avatar?: string,
+}
+
 export interface Command {
     data: SlashCommandBuilder;
     execute: InteractionExecuteFN;
@@ -30,6 +36,7 @@ export interface BotClient extends Client {
     lavalink: LavalinkManager;
     commands: MiniMap<string, Command|SubCommand>
     redis: RedisClientType | JSONStore | MiniMap<string, string>;
+    defaultVolume: number;
 }
 export interface Event {
     name: string,
