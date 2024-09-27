@@ -1,6 +1,6 @@
 # Discord Bot with Lavalink
 
-Lavalink를 이용한 Discord 봇 구현 및 학습 프로젝트
+Lavalink를 이용한 Discord 봇 구현 및 학습 프로젝트</br>
 
 ## 시작하기
 
@@ -40,8 +40,8 @@ npx ts-node index.ts
 ```
 
 ## Lavalink 공식 문서
-Lavalink 설정 및 API 사용에 대한 자세한 내용은 아래의 공식 문서를 참조
-[Lavalink Github Documentation](https://github.com/lavalink-devs/Lavalink)
+Lavalink 설정 및 API 사용에 대한 자세한 내용은 아래의 공식 문서를 참조</br>
+[Lavalink Github](https://github.com/lavalink-devs/Lavalink)
 
 ### 2024-09-27
 - 봇 구동까지 완료.
