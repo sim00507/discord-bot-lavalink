@@ -89,7 +89,9 @@ console.log(LavalinkNodesOfEnv); // you can then provide the result of here in L
                 autoPlayFunction: autoPlayFunction, // Utils.OptionalFunction
             },
             // 플레이어의 음성 채널이 비었을 때 처리
-            // onEmptyPlayerVoice: // 현재 lavalink 버전에 없음.
+            onEmptyPlayerVoice: {
+                destroyAfterMs: 30_000, // 2024-10-01 수정
+            },
             useUnresolvedData: true,
         }, // playerOptions
         
