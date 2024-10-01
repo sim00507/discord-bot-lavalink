@@ -19,7 +19,7 @@
     "discord.js": "^14.16.2",
     "dotenv": "^16.4.5",
     "install": "^0.13.0",
-    "lavalink-client": "^2.3.6",
+    "lavalink-client": "github:Tomato6966/lavalink-client",
     "npm": "^10.8.3",
     "redis": "^4.7.0",
     "ts-node": "^10.9.1",

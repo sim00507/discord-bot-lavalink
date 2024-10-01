@@ -90,7 +90,7 @@ console.log(LavalinkNodesOfEnv); // you can then provide the result of here in L
             },
             // 플레이어의 음성 채널이 비었을 때 처리
             onEmptyPlayerVoice: {
-                destroyAfterMs: 30_000, // 2024-10-01 수정
+                destroyAfterMs: 30_000, // 2024-10-01 추가
             },
             useUnresolvedData: true,
         }, // playerOptions
